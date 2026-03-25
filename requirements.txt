@@ -1,0 +1,18 @@
+# Digital Wellbeing Coach — RL Summative
+# Install with: pip install -r requirements.txt
+
+# Core RL
+gymnasium>=0.29.0
+stable-baselines3>=2.2.0
+
+# Deep learning (REINFORCE policy network)
+torch>=2.1.0
+
+# Visualization
+pygame>=2.5.0
+
+# Numerics
+numpy>=1.26.0
+
+# Optional: nicer progress bars during SB3 training
+# rich>=13.0.0

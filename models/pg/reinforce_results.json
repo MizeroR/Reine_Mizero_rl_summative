@@ -1,0 +1,102 @@
+[
+  {
+    "run": 1,
+    "lr": 0.001,
+    "gamma": 0.99,
+    "hidden": 128,
+    "episodes": 1200,
+    "mean_reward": 50.1394,
+    "std_reward": 9.9365,
+    "train_time_s": 155.53
+  },
+  {
+    "run": 2,
+    "lr": 0.0005,
+    "gamma": 0.99,
+    "hidden": 64,
+    "episodes": 1200,
+    "mean_reward": 55.605,
+    "std_reward": 6.4526,
+    "train_time_s": 84.81
+  },
+  {
+    "run": 3,
+    "lr": 0.002,
+    "gamma": 0.99,
+    "hidden": 128,
+    "episodes": 1000,
+    "mean_reward": 58.0142,
+    "std_reward": 10.6208,
+    "train_time_s": 103.16
+  },
+  {
+    "run": 4,
+    "lr": 0.001,
+    "gamma": 0.95,
+    "hidden": 256,
+    "episodes": 1200,
+    "mean_reward": 59.2743,
+    "std_reward": 7.8195,
+    "train_time_s": 149.48
+  },
+  {
+    "run": 5,
+    "lr": 0.0003,
+    "gamma": 0.99,
+    "hidden": 128,
+    "episodes": 1500,
+    "mean_reward": 46.5557,
+    "std_reward": 7.2519,
+    "train_time_s": 200.41
+  },
+  {
+    "run": 6,
+    "lr": 0.001,
+    "gamma": 0.97,
+    "hidden": 64,
+    "episodes": 1000,
+    "mean_reward": 59.3428,
+    "std_reward": 6.3153,
+    "train_time_s": 82.91
+  },
+  {
+    "run": 7,
+    "lr": 0.002,
+    "gamma": 0.95,
+    "hidden": 128,
+    "episodes": 800,
+    "mean_reward": 57.4286,
+    "std_reward": 8.3926,
+    "train_time_s": 101.7
+  },
+  {
+    "run": 8,
+    "lr": 0.0005,
+    "gamma": 0.99,
+    "hidden": 256,
+    "episodes": 1200,
+    "mean_reward": 49.6269,
+    "std_reward": 7.1028,
+    "train_time_s": 208.47
+  },
+  {
+    "run": 9,
+    "lr": 0.0001,
+    "gamma": 0.9,
+    "hidden": 64,
+    "episodes": 1500,
+    "mean_reward": 58.951,
+    "std_reward": 8.5371,
+    "train_time_s": 150.52
+  },
+  {
+    "run": 10,
+    "lr": 0.001,
+    "gamma": 0.97,
+    "hidden": 128,
+    "episodes": 1000,
+    "mean_reward": 59.9769,
+    "std_reward": 8.6256,
+    "train_time_s": 123.69
+  }
+]
