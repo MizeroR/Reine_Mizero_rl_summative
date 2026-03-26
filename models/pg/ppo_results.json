@@ -7,9 +7,9 @@
     "gamma": 0.99,
     "ent_coef": 0.01,
     "clip": 0.2,
-    "mean_reward": 44.687,
-    "std_reward": 8.3272,
-    "train_time_s": 258.89
+    "mean_reward": 49.1085,
+    "std_reward": 8.3778,
+    "train_time_s": 280.06
   },
   {
     "run": 2,
@@ -19,9 +19,9 @@
     "gamma": 0.99,
     "ent_coef": 0.01,
     "clip": 0.2,
-    "mean_reward": 38.8327,
-    "std_reward": 8.8131,
-    "train_time_s": 347.09
+    "mean_reward": 59.6399,
+    "std_reward": 8.3404,
+    "train_time_s": 242.02
   },
   {
     "run": 3,
@@ -31,9 +31,9 @@
     "gamma": 0.99,
     "ent_coef": 0.02,
     "clip": 0.2,
-    "mean_reward": 41.7608,
-    "std_reward": 8.7685,
-    "train_time_s": 219.1
+    "mean_reward": 53.0094,
+    "std_reward": 10.0173,
+    "train_time_s": 198.28
   },
   {
     "run": 4,
@@ -43,9 +43,9 @@
     "gamma": 0.95,
     "ent_coef": 0.0,
     "clip": 0.1,
-    "mean_reward": 36.9712,
-    "std_reward": 12.6854,
-    "train_time_s": 373.13
+    "mean_reward": 56.7816,
+    "std_reward": 9.0865,
+    "train_time_s": 408.87
   },
   {
     "run": 5,
@@ -55,9 +55,9 @@
     "gamma": 0.99,
     "ent_coef": 0.01,
     "clip": 0.3,
-    "mean_reward": 37.7137,
-    "std_reward": 11.7994,
-    "train_time_s": 248.27
+    "mean_reward": 54.717,
+    "std_reward": 6.4918,
+    "train_time_s": 225.04
   },
   {
     "run": 6,
@@ -67,9 +67,9 @@
     "gamma": 0.99,
     "ent_coef": 0.01,
     "clip": 0.2,
-    "mean_reward": 42.0639,
-    "std_reward": 9.9825,
-    "train_time_s": 255.92
+    "mean_reward": 52.4188,
+    "std_reward": 7.846,
+    "train_time_s": 252.26
   },
   {
     "run": 7,
@@ -79,9 +79,9 @@
     "gamma": 0.97,
     "ent_coef": 0.005,
     "clip": 0.2,
-    "mean_reward": 41.3406,
-    "std_reward": 7.4171,
-    "train_time_s": 243.37
+    "mean_reward": 55.8095,
+    "std_reward": 8.4735,
+    "train_time_s": 253.37
   },
   {
     "run": 8,
@@ -91,9 +91,9 @@
     "gamma": 0.99,
     "ent_coef": 0.01,
     "clip": 0.2,
-    "mean_reward": 43.2866,
-    "std_reward": 10.2893,
-    "train_time_s": 236.13
+    "mean_reward": 51.9648,
+    "std_reward": 8.289,
+    "train_time_s": 248.76
   },
   {
     "run": 9,
@@ -103,9 +103,9 @@
     "gamma": 0.9,
     "ent_coef": 0.02,
     "clip": 0.1,
-    "mean_reward": 42.1194,
-    "std_reward": 9.7825,
-    "train_time_s": 343.45
+    "mean_reward": 55.3484,
+    "std_reward": 9.9821,
+    "train_time_s": 325.07
   },
   {
     "run": 10,
@@ -115,8 +115,8 @@
     "gamma": 0.97,
     "ent_coef": 0.01,
     "clip": 0.2,
-    "mean_reward": 39.8361,
-    "std_reward": 9.712,
-    "train_time_s": 173.61
+    "mean_reward": 59.6481,
+    "std_reward": 7.118,
+    "train_time_s": 208.19
   }
 ]

@@ -1,0 +1,112 @@
+[
+  {
+    "run": 1,
+    "lr": 0.0007,
+    "n_steps": 5,
+    "gamma": 0.99,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "mean_reward": 55.6198,
+    "std_reward": 9.3392,
+    "train_time_s": 285.4
+  },
+  {
+    "run": 2,
+    "lr": 0.0003,
+    "n_steps": 5,
+    "gamma": 0.99,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "mean_reward": 58.0495,
+    "std_reward": 7.855,
+    "train_time_s": 249.42
+  },
+  {
+    "run": 3,
+    "lr": 0.001,
+    "n_steps": 10,
+    "gamma": 0.99,
+    "ent_coef": 0.02,
+    "vf_coef": 0.5,
+    "mean_reward": 54.883,
+    "std_reward": 8.3641,
+    "train_time_s": 214.95
+  },
+  {
+    "run": 4,
+    "lr": 0.0005,
+    "n_steps": 20,
+    "gamma": 0.95,
+    "ent_coef": 0.0,
+    "vf_coef": 0.25,
+    "mean_reward": 56.1756,
+    "std_reward": 11.4103,
+    "train_time_s": 213.28
+  },
+  {
+    "run": 5,
+    "lr": 0.0007,
+    "n_steps": 5,
+    "gamma": 0.99,
+    "ent_coef": 0.01,
+    "vf_coef": 1.0,
+    "mean_reward": 53.869,
+    "std_reward": 9.8665,
+    "train_time_s": 282.13
+  },
+  {
+    "run": 6,
+    "lr": 0.0002,
+    "n_steps": 10,
+    "gamma": 0.97,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "mean_reward": 57.2021,
+    "std_reward": 9.145,
+    "train_time_s": 205.64
+  },
+  {
+    "run": 7,
+    "lr": 0.001,
+    "n_steps": 5,
+    "gamma": 0.95,
+    "ent_coef": 0.005,
+    "vf_coef": 0.5,
+    "mean_reward": 58.2046,
+    "std_reward": 9.135,
+    "train_time_s": 257.69
+  },
+  {
+    "run": 8,
+    "lr": 0.0004,
+    "n_steps": 15,
+    "gamma": 0.99,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "mean_reward": 58.3217,
+    "std_reward": 8.8807,
+    "train_time_s": 187.5
+  },
+  {
+    "run": 9,
+    "lr": 0.0007,
+    "n_steps": 30,
+    "gamma": 0.9,
+    "ent_coef": 0.02,
+    "vf_coef": 0.75,
+    "mean_reward": 58.6469,
+    "std_reward": 9.6655,
+    "train_time_s": 163.43
+  },
+  {
+    "run": 10,
+    "lr": 0.0005,
+    "n_steps": 5,
+    "gamma": 0.97,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "mean_reward": 56.0795,
+    "std_reward": 9.6059,
+    "train_time_s": 244.75
+  }
+]

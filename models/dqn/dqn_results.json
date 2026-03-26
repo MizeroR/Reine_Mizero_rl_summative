@@ -6,9 +6,9 @@
     "gamma": 0.99,
     "exp_frac": 0.2,
     "target_update": 500,
-    "mean_reward": 30.65,
-    "std_reward": 10.4383,
-    "train_time_s": 170.91
+    "mean_reward": 47.0883,
+    "std_reward": 7.254,
+    "train_time_s": 205.28
   },
   {
     "run": 2,
@@ -17,9 +17,9 @@
     "gamma": 0.99,
     "exp_frac": 0.15,
     "target_update": 500,
-    "mean_reward": 30.942,
-    "std_reward": 6.9372,
-    "train_time_s": 196.81
+    "mean_reward": 46.7669,
+    "std_reward": 6.7065,
+    "train_time_s": 177.42
   },
   {
     "run": 3,
@@ -28,9 +28,9 @@
     "gamma": 0.99,
     "exp_frac": 0.2,
     "target_update": 1000,
-    "mean_reward": 34.8957,
-    "std_reward": 11.4931,
-    "train_time_s": 273.49
+    "mean_reward": 51.8298,
+    "std_reward": 6.0746,
+    "train_time_s": 194.83
   },
   {
     "run": 4,
@@ -39,9 +39,9 @@
     "gamma": 0.95,
     "exp_frac": 0.25,
     "target_update": 500,
-    "mean_reward": 38.5718,
-    "std_reward": 11.5464,
-    "train_time_s": 182.93
+    "mean_reward": 55.9978,
+    "std_reward": 6.6581,
+    "train_time_s": 192.13
   },
   {
     "run": 5,
@@ -50,9 +50,9 @@
     "gamma": 0.99,
     "exp_frac": 0.1,
     "target_update": 250,
-    "mean_reward": 15.2331,
-    "std_reward": 10.508,
-    "train_time_s": 227.79
+    "mean_reward": 49.5797,
+    "std_reward": 6.6862,
+    "train_time_s": 188.5
   },
   {
     "run": 6,
@@ -61,9 +61,9 @@
     "gamma": 0.97,
     "exp_frac": 0.3,
     "target_update": 750,
-    "mean_reward": 36.9289,
-    "std_reward": 7.7107,
-    "train_time_s": 184.33
+    "mean_reward": 55.8822,
+    "std_reward": 9.6332,
+    "train_time_s": 182.83
   },
   {
     "run": 7,
@@ -72,9 +72,9 @@
     "gamma": 0.95,
     "exp_frac": 0.15,
     "target_update": 1000,
-    "mean_reward": 37.1053,
-    "std_reward": 6.8437,
-    "train_time_s": 188.01
+    "mean_reward": 50.8352,
+    "std_reward": 7.6791,
+    "train_time_s": 190.19
   },
   {
     "run": 8,
@@ -83,9 +83,9 @@
     "gamma": 0.99,
     "exp_frac": 0.2,
     "target_update": 500,
-    "mean_reward": 3.8105,
-    "std_reward": 6.7203,
-    "train_time_s": 180.06
+    "mean_reward": 49.0138,
+    "std_reward": 8.9536,
+    "train_time_s": 188.04
   },
   {
     "run": 9,
@@ -94,9 +94,9 @@
     "gamma": 0.9,
     "exp_frac": 0.35,
     "target_update": 250,
-    "mean_reward": 39.994,
-    "std_reward": 10.6496,
-    "train_time_s": 173.12
+    "mean_reward": 57.0525,
+    "std_reward": 9.1603,
+    "train_time_s": 166.28
   },
   {
     "run": 10,
@@ -105,8 +105,8 @@
     "gamma": 0.97,
     "exp_frac": 0.2,
     "target_update": 750,
-    "mean_reward": 38.613,
-    "std_reward": 10.8389,
-    "train_time_s": 191.04
+    "mean_reward": 50.0448,
+    "std_reward": 9.0418,
+    "train_time_s": 146.01
   }
 ]
