@@ -101,52 +101,67 @@ Reine_Mizero_rl_summative/
 
 ## Hyperparameter Results
 
-All algorithms trained for **80,000 timesteps** (SB3 algorithms) or **800–1,500 episodes** (REINFORCE) on the same `WellbeingEnv`. Evaluation uses **20 episodes** with a deterministic policy.
+All algorithms trained for **80,000 timesteps** (SB3 algorithms) or **800–1,500 episodes** (REINFORCE) on the same `WellbeingEnv`. Evaluation uses **20 episodes** with a deterministic policy. Terminal condition: SAS-SV < 24 (mild-risk status).
 
 ### DQN — 10 Hyperparameter Runs
 
 | Run | LR | Batch | Gamma | Exp Frac | Target Update | Mean Reward | Std | Time (s) |
 |---|---|---|---|---|---|---|---|---|
-| **9** ★ | 1e-4 | 32 | 0.90 | 0.35 | 250 | **39.994** | 10.650 | 173.1 |
-| 10 | 5e-4 | 64 | 0.97 | 0.20 | 750 | 38.613 | 10.839 | 191.0 |
-| 4 | 1e-3 | 32 | 0.95 | 0.25 | 500 | 38.572 | 11.546 | 182.9 |
-| 7 | 1e-3 | 64 | 0.95 | 0.15 | 1000 | 37.105 | 6.844 | 188.0 |
-| 6 | 2e-4 | 64 | 0.97 | 0.30 | 750 | 36.929 | 7.711 | 184.3 |
-| 3 | 1e-4 | 128 | 0.99 | 0.20 | 1000 | 34.896 | 11.493 | 273.5 |
-| 2 | 5e-4 | 64 | 0.99 | 0.15 | 500 | 30.942 | 6.937 | 196.8 |
-| 1 | 1e-3 | 64 | 0.99 | 0.20 | 500 | 30.650 | 10.438 | 170.9 |
-| 5 | 5e-4 | 128 | 0.99 | 0.10 | 250 | 15.233 | 10.508 | 227.8 |
-| 8 | 3e-4 | 256 | 0.99 | 0.20 | 500 | 3.811 | 6.720 | 180.1 |
+| **9** ★ | 1e-4 | 32 | 0.90 | 0.35 | 250 | **57.053** | 9.160 | 166.3 |
+| 4 | 1e-3 | 32 | 0.95 | 0.25 | 500 | 55.998 | 6.658 | 192.1 |
+| 6 | 2e-4 | 64 | 0.97 | 0.30 | 750 | 55.882 | 9.633 | 182.8 |
+| 3 | 1e-4 | 128 | 0.99 | 0.20 | 1000 | 51.830 | 6.075 | 194.8 |
+| 7 | 1e-3 | 64 | 0.95 | 0.15 | 1000 | 50.835 | 7.679 | 190.2 |
+| 10 | 5e-4 | 64 | 0.97 | 0.20 | 750 | 50.045 | 9.042 | 146.0 |
+| 5 | 5e-4 | 128 | 0.99 | 0.10 | 250 | 49.580 | 6.686 | 188.5 |
+| 8 | 3e-4 | 256 | 0.99 | 0.20 | 500 | 49.014 | 8.954 | 188.0 |
+| 1 | 1e-3 | 64 | 0.99 | 0.20 | 500 | 47.088 | 7.254 | 205.3 |
+| 2 | 5e-4 | 64 | 0.99 | 0.15 | 500 | 46.767 | 6.707 | 177.4 |
 
 ### PPO — 10 Hyperparameter Runs
 
 | Run | LR | n_steps | Batch | Gamma | Ent Coef | Clip | Mean Reward | Std | Time (s) |
 |---|---|---|---|---|---|---|---|---|---|
-| **1** ★ | 3e-4 | 512 | 64 | 0.99 | 0.01 | 0.2 | **44.687** | 8.327 | 258.9 |
-| 8 | 3e-4 | 512 | 64 | 0.99 | 0.01 | 0.2 | 43.287 | 10.289 | 236.1 |
-| 9 | 1e-4 | 256 | 32 | 0.90 | 0.02 | 0.1 | 42.119 | 9.783 | 343.5 |
-| 6 | 3e-4 | 2048 | 64 | 0.99 | 0.01 | 0.2 | 42.064 | 9.983 | 255.9 |
-| 3 | 5e-4 | 512 | 128 | 0.99 | 0.02 | 0.2 | 41.761 | 8.769 | 219.1 |
-| 7 | 1e-3 | 512 | 64 | 0.97 | 0.005 | 0.2 | 41.341 | 7.417 | 243.4 |
-| 10 | 5e-4 | 1024 | 64 | 0.97 | 0.01 | 0.2 | 39.836 | 9.712 | 173.6 |
-| 2 | 1e-4 | 1024 | 64 | 0.99 | 0.01 | 0.2 | 38.833 | 8.813 | 347.1 |
-| 5 | 2e-4 | 1024 | 128 | 0.99 | 0.01 | 0.3 | 37.714 | 11.799 | 248.3 |
-| 4 | 3e-4 | 256 | 32 | 0.95 | 0.00 | 0.1 | 36.971 | 12.685 | 373.1 |
+| **10** ★ | 5e-4 | 1024 | 64 | 0.97 | 0.01 | 0.2 | **59.648** | 7.118 | 208.2 |
+| 2 | 1e-4 | 1024 | 64 | 0.99 | 0.01 | 0.2 | 59.640 | 8.340 | 242.0 |
+| 4 | 3e-4 | 256 | 32 | 0.95 | 0.00 | 0.1 | 56.782 | 9.087 | 408.9 |
+| 7 | 1e-3 | 512 | 64 | 0.97 | 0.005 | 0.2 | 55.810 | 8.474 | 253.4 |
+| 9 | 1e-4 | 256 | 32 | 0.90 | 0.02 | 0.1 | 55.348 | 9.982 | 325.1 |
+| 5 | 2e-4 | 1024 | 128 | 0.99 | 0.01 | 0.3 | 54.717 | 6.492 | 225.0 |
+| 3 | 5e-4 | 512 | 128 | 0.99 | 0.02 | 0.2 | 53.009 | 10.017 | 198.3 |
+| 6 | 3e-4 | 2048 | 64 | 0.99 | 0.01 | 0.2 | 52.419 | 7.846 | 252.3 |
+| 8 | 3e-4 | 512 | 64 | 0.99 | 0.01 | 0.2 | 51.965 | 8.289 | 248.8 |
+| 1 | 3e-4 | 512 | 64 | 0.99 | 0.01 | 0.2 | 49.109 | 8.378 | 280.1 |
+
+### A2C — 10 Hyperparameter Runs
+
+| Run | LR | n_steps | Gamma | Ent Coef | VF Coef | Mean Reward | Std | Time (s) |
+|---|---|---|---|---|---|---|---|---|
+| **9** ★ | 7e-4 | 30 | 0.90 | 0.02 | 0.75 | **58.647** | 9.666 | 163.4 |
+| 8 | 4e-4 | 15 | 0.99 | 0.01 | 0.50 | 58.322 | 8.881 | 187.5 |
+| 7 | 1e-3 | 5 | 0.95 | 0.005 | 0.50 | 58.205 | 9.135 | 257.7 |
+| 2 | 3e-4 | 5 | 0.99 | 0.01 | 0.50 | 58.050 | 7.856 | 249.4 |
+| 6 | 2e-4 | 10 | 0.97 | 0.01 | 0.50 | 57.202 | 9.145 | 205.6 |
+| 4 | 5e-4 | 20 | 0.95 | 0.00 | 0.25 | 56.176 | 11.410 | 213.3 |
+| 10 | 5e-4 | 5 | 0.97 | 0.01 | 0.50 | 56.080 | 9.606 | 244.8 |
+| 1 | 7e-4 | 5 | 0.99 | 0.01 | 0.50 | 55.620 | 9.339 | 285.4 |
+| 3 | 1e-3 | 10 | 0.99 | 0.02 | 0.50 | 54.883 | 8.364 | 215.0 |
+| 5 | 7e-4 | 5 | 0.99 | 0.01 | 1.00 | 53.869 | 9.867 | 282.1 |
 
 ### REINFORCE — 10 Hyperparameter Runs
 
 | Run | LR | Gamma | Hidden | Episodes | Mean Reward | Std | Time (s) |
 |---|---|---|---|---|---|---|---|
-| **7** ★ | 2e-3 | 0.95 | 128 | 800 | **43.070** | 9.316 | 57.5 |
-| 9 | 1e-4 | 0.90 | 64 | 1500 | 42.906 | 10.224 | 118.7 |
-| 3 | 2e-3 | 0.99 | 128 | 1000 | 42.810 | 9.324 | 77.7 |
-| 2 | 5e-4 | 0.99 | 64 | 1200 | 42.796 | 9.727 | 135.2 |
-| 10 | 1e-3 | 0.97 | 128 | 1000 | 41.863 | 10.390 | 97.0 |
-| 5 | 3e-4 | 0.99 | 128 | 1500 | 37.874 | 11.113 | 127.4 |
-| 8 | 5e-4 | 0.99 | 256 | 1200 | 34.290 | 7.266 | 115.6 |
-| 1 | 1e-3 | 0.99 | 128 | 1200 | 32.245 | 9.115 | 116.1 |
-| 6 | 1e-3 | 0.97 | 64 | 1000 | 30.547 | 5.936 | 63.8 |
-| 4 | 1e-3 | 0.95 | 256 | 1200 | 30.029 | 4.506 | 113.9 |
+| **10** ★ | 1e-3 | 0.97 | 128 | 1000 | **59.977** | 8.626 | 123.7 |
+| 6 | 1e-3 | 0.97 | 64 | 1000 | 59.343 | 6.315 | 82.9 |
+| 4 | 1e-3 | 0.95 | 256 | 1200 | 59.274 | 7.820 | 149.5 |
+| 9 | 1e-4 | 0.90 | 64 | 1500 | 58.951 | 8.537 | 150.5 |
+| 3 | 2e-3 | 0.99 | 128 | 1000 | 58.014 | 10.621 | 103.2 |
+| 7 | 2e-3 | 0.95 | 128 | 800 | 57.429 | 8.393 | 101.7 |
+| 2 | 5e-4 | 0.99 | 64 | 1200 | 55.605 | 6.453 | 84.8 |
+| 1 | 1e-3 | 0.99 | 128 | 1200 | 50.139 | 9.937 | 155.5 |
+| 8 | 5e-4 | 0.99 | 256 | 1200 | 49.627 | 7.103 | 208.5 |
+| 5 | 3e-4 | 0.99 | 128 | 1500 | 46.556 | 7.252 | 200.4 |
 
 ---
 
@@ -154,28 +169,28 @@ All algorithms trained for **80,000 timesteps** (SB3 algorithms) or **800–1,50
 
 | Algorithm | Best Mean Reward | Std | Best Run Config |
 |---|---|---|---|
-| **PPO** ★ | **44.687** | **8.327** | lr=3e-4, n_steps=512, clip=0.2 |
-| REINFORCE | 43.070 | 9.316 | lr=2e-3, gamma=0.95, hidden=128 |
-| DQN | 39.994 | 10.650 | lr=1e-4, batch=32, gamma=0.90 |
-| A2C | — | — | Not trained (time constraint) |
+| **REINFORCE** ★ | **59.977** | 8.626 | lr=1e-3, gamma=0.97, hidden=128, episodes=1000 |
+| PPO | 59.648 | **7.118** | lr=5e-4, n_steps=1024, clip=0.2 |
+| A2C | 58.647 | 9.666 | lr=7e-4, n_steps=30, gamma=0.90 |
+| DQN | 57.053 | 9.160 | lr=1e-4, batch=32, gamma=0.90 |
 
-**Winner: PPO** — highest mean reward (44.687) and lowest standard deviation (8.327), indicating both peak performance and consistency across evaluation episodes.
+**Winner: REINFORCE** — highest mean reward (59.977). PPO is the most consistent with the lowest standard deviation (7.118), making it the most reliable choice in production.
 
 ---
 
 ## Analysis
 
-### Why PPO performed best
-PPO's clipping mechanism (clip=0.2) prevents large destructive policy updates, making it stable on this environment where a single bad policy change can cascade across the 30-step episode. Its n_steps=512 setting also provides a good balance between data freshness and update quality.
+### Why REINFORCE won
+With the corrected environment (reduced natural drift, terminal condition at SAS < 24), episodes are short enough that Monte Carlo returns have low variance. This is exactly the setting where REINFORCE excels — it sees complete episodes and updates cleanly without the complexity of bootstrapping. The winning config (lr=1e-3, gamma=0.97, hidden=128) uses a moderate discount that slightly de-emphasises distant steps, which suits a 30-step episode well.
 
-### Why REINFORCE was competitive despite its simplicity
-The environment's short episodes (max 30 steps) reduce the high-variance problem that typically hurts REINFORCE. With a small MDP, Monte Carlo returns are less noisy, allowing REINFORCE to perform surprisingly close to PPO. Notably, REINFORCE also trained significantly faster (57s vs 259s for the best run).
+### Why PPO is the most consistent
+PPO's clipping mechanism (clip=0.2) prevents large destructive policy updates. It achieved the lowest std (7.118) across evaluation episodes, meaning it performs reliably regardless of the initial user state. In a real deployment scenario PPO would be the safer choice despite REINFORCE's marginally higher peak reward.
 
-### Why DQN scored lowest
-DQN's best configuration used a lower gamma (0.90) and high exploration fraction (0.35), suggesting the agent needed significant randomness to avoid poor local optima. The Q-network had difficulty learning precise value estimates given the stochastic compliance dynamics.
+### Why A2C and DQN trailed
+A2C updates very frequently (n_steps=5–30) which introduces noise on this stochastic environment. Its best run used n_steps=30 which is actually one full episode — essentially behaving like REINFORCE, explaining why it scored close to the top. DQN struggled because its Q-network must model the precise value of each state under stochastic compliance, which is harder than learning a direct policy. Notably DQN's best config again used low gamma (0.90) and high exploration (0.35), consistent with the first training run.
 
 ### Observed agent behaviour (demo episode)
-The PPO agent demonstrated **action collapse** — using "Reduce Screen Time" 87% of the time. While SAS-SV dropped from 41.5 to 32.9 (−9.2), the agent did not reach the low-risk terminal condition within 30 steps. This reflects a suboptimal but partially learned policy: the agent correctly identifies that reducing screen time lowers risk, but does not diversify across social media blocking or mindfulness prompts which have stronger SAS-SV delta when complied with.
+The REINFORCE agent used "Send Mindfulness Prompt" 100% of the time, reducing SAS-SV from 40.5 to 22.7 (Δ −17.8) and terminating just before the 30-step limit. This is another case of action collapse — the agent found one action that reliably reduces SAS via sleep improvement and committed to it. A future improvement would be adding an entropy bonus to the reward to encourage action diversity across social media blocking and focus mode interventions.
 
 ---
 

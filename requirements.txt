@@ -14,5 +14,8 @@ pygame>=2.5.0
 # Numerics
 numpy>=1.26.0
 
+# Plotting (report figures)
+matplotlib>=3.8.0
+
 # Optional: nicer progress bars during SB3 training
 # rich>=13.0.0

@@ -201,7 +201,7 @@ def run(algo: str | None = None, gui: bool = True):
     obs, info = env.reset(seed=0)
 
     print(f"  Starting state   : SAS-SV={info['sas_score']:.1f}  "
-          f"(high-risk, target < 12)\n")
+          f"(high-risk, target < 24 = mild risk)\n")
 
     total_reward = 0.0
     done         = False
