@@ -20,7 +20,7 @@ Action Space (6 discrete actions):
     5 — Enable focus mode
 
 Terminal Conditions:
-    - SAS-SV score < 12 (user reaches low-risk)
+    - SAS-SV score < 24 (user reaches mild-risk status)
     - Episode reaches 30 timesteps
 """
 
@@ -213,16 +213,16 @@ class WellbeingEnv(gym.Env):
         elif not complied and action != 0:
             reward -= 0.5                             # non-compliance penalty
 
-        # Bonus for reaching low risk
-        if new_sas < 12:
+        # Bonus for reaching mild-risk status
+        if new_sas < 24:
             reward += 10.0
 
         # Small penalty for aggressive interventions when risk is already low
-        if new_sas < 20 and action in (2, 4):
+        if new_sas < 24 and action in (2, 4):
             reward -= 0.3
 
         # ── Terminal check ─────────────────────────────────────────────────
-        terminated = bool(new_sas < 12)
+        terminated = bool(new_sas < 24)
         truncated  = bool(self.step_count >= self.max_steps)
 
         info = {
