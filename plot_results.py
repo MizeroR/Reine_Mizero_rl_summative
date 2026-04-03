@@ -3,10 +3,10 @@ plot_results.py — Digital Wellbeing Coach RL
 Generates all report figures from saved results JSON files.
 
 Figures produced (saved to plots/):
-    1. cumulative_rewards.png   — mean reward per run, all 4 algorithms (subplots)
+    1. cumulative_rewards.png   — mean reward per run, DQN / PPO / REINFORCE (subplots)
     2. convergence.png          — best-run reward ranked across all algorithms
     3. dqn_analysis.png         — DQN: effect of gamma, exploration fraction, batch size
-    4. pg_entropy.png           — PPO/A2C: effect of entropy coefficient
+    4. pg_entropy.png           — PPO entropy coefficient effect + REINFORCE gamma effect
     5. hyperparameter_heatmap.png — LR vs gamma reward heatmap (DQN & PPO)
     6. generalization.png       — reward std comparison (stability / generalization)
 
@@ -35,13 +35,11 @@ def load(path: str) -> list[dict]:
 
 DQN_R = load(os.path.join(ROOT, "models", "dqn", "dqn_results.json"))
 PPO_R = load(os.path.join(ROOT, "models", "pg",  "ppo_results.json"))
-A2C_R = load(os.path.join(ROOT, "models", "pg",  "a2c_results.json"))
 RF_R  = load(os.path.join(ROOT, "models", "pg",  "reinforce_results.json"))
 
 ALGO_DATA = {
     "DQN":       (DQN_R, "#4A90D9"),
     "PPO":       (PPO_R, "#E67E22"),
-    "A2C":       (A2C_R, "#2ECC71"),
     "REINFORCE": (RF_R,  "#9B59B6"),
 }
 
@@ -71,12 +69,12 @@ def _save(name: str):
     print(f"  ✓ Saved → {path}")
 
 
-# ── 1. Cumulative Rewards — all 4 algorithms in subplots ──────────────────────
+# ── 1. Cumulative Rewards — 3 algorithms in subplots ─────────────────────────
 
 def plot_cumulative_rewards():
-    fig, axes = plt.subplots(2, 2, figsize=(13, 9))
+    fig, axes = plt.subplots(1, 3, figsize=(16, 5))
     fig.suptitle("Mean Reward per Hyperparameter Run — All Algorithms",
-                 fontsize=14, fontweight="bold", y=1.01)
+                 fontsize=14, fontweight="bold", y=1.03)
 
     for ax, (algo, (data, color)) in zip(axes.flat, ALGO_DATA.items()):
         runs    = [d["run"]         for d in data]
@@ -188,36 +186,52 @@ def plot_dqn_analysis():
     _save("dqn_analysis.png")
 
 
-# ── 4. PG Entropy — effect of entropy coefficient (PPO & A2C) ─────────────────
+# ── 4. PG Entropy — effect of entropy coefficient (PPO & REINFORCE) ──────────
 
 def plot_pg_entropy():
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-    fig.suptitle("Policy Gradient — Entropy Coefficient Effect", fontsize=13,
+    fig.suptitle("Policy Gradient — Entropy & Gamma Effect", fontsize=13,
                  fontweight="bold")
 
-    for ax, (algo, data, color) in zip(axes, [
-        ("PPO", PPO_R, ALGO_DATA["PPO"][1]),
-        ("A2C", A2C_R, ALGO_DATA["A2C"][1]),
-    ]):
-        ents = sorted(set(d["ent_coef"] for d in data))
-        means = [np.mean([d["mean_reward"] for d in data if d["ent_coef"] == e])
-                 for e in ents]
-        stds  = [np.std( [d["mean_reward"] for d in data if d["ent_coef"] == e])
-                 for e in ents]
+    # PPO — entropy coefficient effect
+    ax = axes[0]
+    color = ALGO_DATA["PPO"][1]
+    ents  = sorted(set(d["ent_coef"] for d in PPO_R))
+    means = [np.mean([d["mean_reward"] for d in PPO_R if d["ent_coef"] == e]) for e in ents]
+    stds  = [np.std( [d["mean_reward"] for d in PPO_R if d["ent_coef"] == e]) for e in ents]
+    ax.plot([str(e) for e in ents], means, marker="o", color=color,
+            linewidth=2, markersize=8, label="Mean Reward")
+    ax.fill_between(range(len(ents)),
+                    [m - s for m, s in zip(means, stds)],
+                    [m + s for m, s in zip(means, stds)],
+                    color=color, alpha=0.2, label="±1 std")
+    ax.set_xticks(range(len(ents)))
+    ax.set_xticklabels([str(e) for e in ents])
+    ax.set_title("PPO — Entropy Coefficient Effect", fontsize=11)
+    ax.set_xlabel("Entropy Coefficient (ent_coef)")
+    ax.set_ylabel("Mean Reward")
+    ax.legend(fontsize=9)
+    ax.grid()
 
-        ax.plot([str(e) for e in ents], means, marker="o", color=color,
-                linewidth=2, markersize=8, label="Mean Reward")
-        ax.fill_between(range(len(ents)),
-                        [m - s for m, s in zip(means, stds)],
-                        [m + s for m, s in zip(means, stds)],
-                        color=color, alpha=0.2, label="±1 std")
-        ax.set_xticks(range(len(ents)))
-        ax.set_xticklabels([str(e) for e in ents])
-        ax.set_title(f"{algo} — Entropy Coefficient", fontsize=11)
-        ax.set_xlabel("Entropy Coefficient (ent_coef)")
-        ax.set_ylabel("Mean Reward")
-        ax.legend(fontsize=9)
-        ax.grid()
+    # REINFORCE — gamma effect
+    ax = axes[1]
+    color = ALGO_DATA["REINFORCE"][1]
+    gammas = sorted(set(d["gamma"] for d in RF_R))
+    means  = [np.mean([d["mean_reward"] for d in RF_R if d["gamma"] == g]) for g in gammas]
+    stds   = [np.std( [d["mean_reward"] for d in RF_R if d["gamma"] == g]) for g in gammas]
+    ax.plot([str(g) for g in gammas], means, marker="o", color=color,
+            linewidth=2, markersize=8, label="Mean Reward")
+    ax.fill_between(range(len(gammas)),
+                    [m - s for m, s in zip(means, stds)],
+                    [m + s for m, s in zip(means, stds)],
+                    color=color, alpha=0.2, label="±1 std")
+    ax.set_xticks(range(len(gammas)))
+    ax.set_xticklabels([str(g) for g in gammas])
+    ax.set_title("REINFORCE — Gamma (Discount Factor) Effect", fontsize=11)
+    ax.set_xlabel("Gamma")
+    ax.set_ylabel("Mean Reward")
+    ax.legend(fontsize=9)
+    ax.grid()
 
     plt.tight_layout()
     _save("pg_entropy.png")
